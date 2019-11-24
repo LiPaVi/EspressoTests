@@ -62,12 +62,14 @@ class SimpleTest : AbstractSwiftnotesTest() {
     @Test
     @DisplayName("Проверка сохранения заметки")
     fun SaveNewNoteTest() {
+        val titleText = "Заметка № 1"
+        val noteText = "Hello, world!"
         mainPage.clickPlusButton()
-//        В поля "Title" и "Note" ввести текст
-//        Проверить, что текст введен корректно
-//        Нажать в тулбаре "Назад"
-//        В диалоге нажать "Yes"
-//        Открылся главный экран. Проверяем, что запись появилась (обе текстовки)
+        createPage.addNoteText(titleText, noteText)
+        createPage.checkCorrectText(titleText, noteText)
+        createPage.clickBackButton()
+        createPage.clickPositiveButton()
+        mainPage.checkNoteText(titleText, noteText)
     }
 
     @Test
