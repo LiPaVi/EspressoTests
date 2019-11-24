@@ -1,27 +1,24 @@
 package com.moonpi.swiftnotes.test
 
-import android.support.test.espresso.Espresso.onView
-import android.support.test.espresso.action.ViewActions.click
-import android.support.test.espresso.assertion.ViewAssertions.matches
-import android.support.test.espresso.matcher.ViewMatchers.*
+import android.support.test.espresso.Espresso.pressBack
 import android.support.test.runner.AndroidJUnit4
 import com.moonpi.swiftnotes.MainActivity
-import com.moonpi.swiftnotes.R
-import com.moonpi.swiftnotes.steps.MainPage
 import com.moonpi.swiftnotes.rule.SwiftnotesRule
 import com.moonpi.swiftnotes.steps.CreatePage
-import org.hamcrest.CoreMatchers.allOf
+import com.moonpi.swiftnotes.steps.MainPage
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import ru.tinkoff.allure.android.deviceScreenshot
 import ru.tinkoff.allure.annotations.DisplayName
-import ru.tinkoff.allure.step
 
 @RunWith(AndroidJUnit4::class)
 @DisplayName("Создание заметки")
 class SimpleTest : AbstractSwiftnotesTest() {
+
+    private val titleText = "Заметка № 1"
+    private val noteText = "Hello, world!"
 
     @get:Rule
     val rule = SwiftnotesRule(MainActivity::class.java, false)
@@ -62,8 +59,6 @@ class SimpleTest : AbstractSwiftnotesTest() {
     @Test
     @DisplayName("Проверка сохранения заметки")
     fun SaveNewNoteTest() {
-        val titleText = "Заметка № 1"
-        val noteText = "Hello, world!"
         mainPage.clickPlusButton()
         createPage.addNoteText(titleText, noteText)
         createPage.checkCorrectText(titleText, noteText)
@@ -75,11 +70,12 @@ class SimpleTest : AbstractSwiftnotesTest() {
     @Test
     @DisplayName("Проверка пунктов меню в тулбаре")
     fun MenuTest() {
-//        Нажать "Меню"
-//        Проверить отображение пунктов меню: "Backup notes", "Restore notes", "Rate app"
-//        Нажать "+"
-//        Нажать "Меню"
-//        Проверить отображение пунктов меню: "Note font size", "Hide note body in list"
+        mainPage.clickMenu()
+        mainPage.checkMenu()
+        pressBack()
+        mainPage.clickPlusButton()
+        createPage.clickMenu()
+        createPage.checkMenu()
     }
 
     @Test
@@ -87,8 +83,11 @@ class SimpleTest : AbstractSwiftnotesTest() {
     fun DeleteNoteTest() {
         mainPage.clickPlusButton()
 //        В поля "Title" и "Note" ввести текст
+        createPage.addNoteText(titleText, noteText)
 //        Нажать в тулбаре "Назад"
 //        В диалоге нажать "Yes"
+        createPage.clickBackButton()
+        createPage.clickPositiveButton()
 //        Лонг тап на заметку на главном экране
 //        В тулбаре нажать "Удалить"
 //        Проверяем отсутствие заметки на главном экране

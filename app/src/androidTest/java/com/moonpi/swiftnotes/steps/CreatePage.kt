@@ -1,25 +1,19 @@
 package com.moonpi.swiftnotes.steps
 
-import android.support.test.espresso.Espresso
 import android.support.test.espresso.Espresso.onView
-import android.support.test.espresso.Espresso.pressBack
-import android.support.test.espresso.ViewAssertion
-import android.support.test.espresso.action.ViewActions.*
+import android.support.test.espresso.action.ViewActions.click
+import android.support.test.espresso.action.ViewActions.replaceText
 import android.support.test.espresso.assertion.ViewAssertions
 import android.support.test.espresso.matcher.RootMatchers.isDialog
-import android.support.test.espresso.matcher.ViewMatchers
 import android.support.test.espresso.matcher.ViewMatchers.*
-import android.widget.ImageButton
 import com.moonpi.swiftnotes.R
 import org.hamcrest.CoreMatchers
 import org.hamcrest.CoreMatchers.endsWith
-import org.hamcrest.Matcher
 import ru.tinkoff.allure.step
-import java.util.regex.Pattern.matches
 
 class CreatePage {
-    private val title = onView(CoreMatchers.allOf(ViewMatchers.withId(R.id.titleEdit), ViewMatchers.isDisplayed()))
-    private val note = onView(CoreMatchers.allOf(ViewMatchers.withId(R.id.bodyEdit), ViewMatchers.isDisplayed()))
+    private val title = onView(CoreMatchers.allOf(withId(R.id.titleEdit), isDisplayed()))
+    private val note = onView(CoreMatchers.allOf(withId(R.id.bodyEdit), isDisplayed()))
     private val backButton = onView(withClassName(endsWith("ImageButton")))
     private val titleDefaultText = "Title"
     private val noteDefaultText = "Note"
@@ -29,11 +23,15 @@ class CreatePage {
     private val messageText = "Save changes?"
     private val positiveButtonText = "YES"
     private val negativeButtonText = "NO"
-    private val menu = onView(ViewMatchers.withClassName(CoreMatchers.endsWith("ImageView")))
+    private val noteFontSize = "Note font size"
+    private val hideNote = "Hide note body in list"
+    private val menu = onView(withContentDescription("Ещё"))
+    private val noteFontSizeMenu = onView(withText(noteFontSize))
+    private val hideNoteMenu = onView(withText(hideNote))
 
     fun checkTitle() {
         step("Проверить хинт заголовка \"{titleDefaultText}\"") {
-            title.check(ViewAssertions.matches(ViewMatchers.withHint(titleDefaultText)))
+            title.check(ViewAssertions.matches(withHint(titleDefaultText)))
         }
     }
 
@@ -46,7 +44,7 @@ class CreatePage {
 
     fun checkNote() {
         step("Проверить хинт текста \"{noteDefaultText}\"") {
-            note.check(ViewAssertions.matches(ViewMatchers.withHint(noteDefaultText)))
+            note.check(ViewAssertions.matches(withHint(noteDefaultText)))
         }
     }
 
@@ -81,16 +79,23 @@ class CreatePage {
         }
     }
 
-    fun checkCorrectText(titleText: String, noteText: String){
-        step("Проверить, что текст введен корректно"){
-            title.check(ViewAssertions.matches(ViewMatchers.withText(titleText)))
-            note.check(ViewAssertions.matches(ViewMatchers.withText(noteText)))
+    fun checkCorrectText(titleText: String, noteText: String) {
+        step("Проверить, что текст введен корректно") {
+            title.check(ViewAssertions.matches(withText(titleText)))
+            note.check(ViewAssertions.matches(withText(noteText)))
         }
     }
 
-    fun clickMenu(){
-        step("Нажать \"Меню\""){
+    fun clickMenu() {
+        step("Нажать \"Меню\"") {
             menu.perform(click())
+        }
+    }
+
+    fun checkMenu() {
+        step("Проверить отображение пунктов меню: \"{noteFontSize}\", \"{hideNote}\"") {
+            noteFontSizeMenu.check(ViewAssertions.matches(isEnabled()))
+            hideNoteMenu.check(ViewAssertions.matches(isEnabled()))
         }
     }
 }
