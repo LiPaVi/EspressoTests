@@ -82,14 +82,11 @@ class SimpleTest : AbstractSwiftnotesTest() {
     @DisplayName("Проверка удаления заметки")
     fun DeleteNoteTest() {
         mainPage.clickPlusButton()
-//        В поля "Title" и "Note" ввести текст
         createPage.addNoteText(titleText, noteText)
-//        Нажать в тулбаре "Назад"
-//        В диалоге нажать "Yes"
         createPage.clickBackButton()
         createPage.clickPositiveButton()
-//        Лонг тап на заметку на главном экране
-//        В тулбаре нажать "Удалить"
-//        Проверяем отсутствие заметки на главном экране
+        mainPage.longClickToNote()
+        mainPage.deleteNote()
+        mainPage.checkDeletedNote()
     }
 }

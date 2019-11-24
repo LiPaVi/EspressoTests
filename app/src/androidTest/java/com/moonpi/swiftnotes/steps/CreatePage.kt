@@ -12,19 +12,19 @@ import org.hamcrest.CoreMatchers.endsWith
 import ru.tinkoff.allure.step
 
 class CreatePage {
-    private val title = onView(CoreMatchers.allOf(withId(R.id.titleEdit), isDisplayed()))
-    private val note = onView(CoreMatchers.allOf(withId(R.id.bodyEdit), isDisplayed()))
-    private val backButton = onView(withClassName(endsWith("ImageButton")))
-    private val titleDefaultText = "Title"
-    private val noteDefaultText = "Note"
-    private val saveDialog = onView(withId(android.R.id.message)).inRoot(isDialog())
-    private val positiveButton = onView(withId(android.R.id.button1)).inRoot(isDialog())
-    private val negativeButton = onView(withId(android.R.id.button2)).inRoot(isDialog())
     private val messageText = "Save changes?"
     private val positiveButtonText = "YES"
     private val negativeButtonText = "NO"
     private val noteFontSize = "Note font size"
     private val hideNote = "Hide note body in list"
+    private val titleDefaultText = "Title"
+    private val noteDefaultText = "Note"
+    private val title = onView(CoreMatchers.allOf(withId(R.id.titleEdit), isDisplayed()))
+    private val note = onView(CoreMatchers.allOf(withId(R.id.bodyEdit), isDisplayed()))
+    private val backButton = onView(withClassName(endsWith("ImageButton")))
+    private val saveDialog = onView(withId(android.R.id.message)).inRoot(isDialog())
+    private val positiveButton = onView(withId(android.R.id.button1)).inRoot(isDialog())
+    private val negativeButton = onView(withId(android.R.id.button2)).inRoot(isDialog())
     private val menu = onView(withContentDescription("Ещё"))
     private val noteFontSizeMenu = onView(withText(noteFontSize))
     private val hideNoteMenu = onView(withText(hideNote))

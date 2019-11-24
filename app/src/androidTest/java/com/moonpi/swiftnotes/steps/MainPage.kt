@@ -2,7 +2,9 @@ package com.moonpi.swiftnotes.steps
 
 import android.support.test.espresso.Espresso.onView
 import android.support.test.espresso.action.ViewActions.click
+import android.support.test.espresso.action.ViewActions.longClick
 import android.support.test.espresso.assertion.ViewAssertions
+import android.support.test.espresso.matcher.RootMatchers
 import android.support.test.espresso.matcher.ViewMatchers
 import android.support.test.espresso.matcher.ViewMatchers.isEnabled
 import android.support.test.espresso.matcher.ViewMatchers.withText
@@ -11,12 +13,12 @@ import org.hamcrest.CoreMatchers
 import ru.tinkoff.allure.step
 
 class MainPage {
-    private val addNote = onView(ViewMatchers.withId(R.id.newNote))
-    private val toolbar = onView(CoreMatchers.allOf(ViewMatchers.withId(R.id.toolbarMain), ViewMatchers.isDisplayed()))
     private val titleText = "Swiftnotes"
     private val backup = "Backup notes"
     private val restore = "Restore notes"
     private val rateApp = "Rate app"
+    private val addNote = onView(ViewMatchers.withId(R.id.newNote))
+    private val toolbar = onView(CoreMatchers.allOf(ViewMatchers.withId(R.id.toolbarMain), ViewMatchers.isDisplayed()))
     private val titleView = onView(ViewMatchers.withId(R.id.titleView))
     private val bodyView = onView(ViewMatchers.withId(R.id.bodyView))
     private val menu = onView(ViewMatchers.withContentDescription("Ещё"))
@@ -25,6 +27,7 @@ class MainPage {
     private val rateAppMenu = onView(withText(rateApp))
     private val note = onView(ViewMatchers.withId(R.id.relativeLayout))
     private val delete = onView(ViewMatchers.withId(R.id.action_delete))
+    private val okButton = onView(ViewMatchers.withId(android.R.id.button1)).inRoot(RootMatchers.isDialog())
 
     fun clickPlusButton() {
         step("Нажать \"+\"") {
@@ -57,5 +60,22 @@ class MainPage {
             restoreMenu.check(ViewAssertions.matches(isEnabled()))
             rateAppMenu.check(ViewAssertions.matches(isEnabled()))
         }
+    }
+
+    fun longClickToNote() {
+        step("Лонг тап на заметку на главном экране") {
+            note.perform(longClick())
+        }
+    }
+
+    fun deleteNote() {
+        step("В тулбаре нажать \"Удалить\" и затем ") {
+            delete.perform(click())
+            okButton.perform(click())
+        }
+    }
+
+    fun checkDeletedNote() {
+        note.check(ViewAssertions.doesNotExist())
     }
 }
