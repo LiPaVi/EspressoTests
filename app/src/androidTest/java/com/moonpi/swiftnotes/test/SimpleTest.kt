@@ -51,10 +51,11 @@ class SimpleTest : AbstractSwiftnotesTest() {
         mainPage.clickPlusButton()
         createPage.checkTitle()
         createPage.checkNote()
-//        Нажать в тулбаре "Назад"
-//        Появляется диалог. Проверить текст "Save changes?". Проверить наличие двух кнопок "No", "Yes".
-//        Нажать "No"
-//        Открылся главный экран (проверяем по текстовке в тулбаре)
+        createPage.clickBackButton()
+        createPage.checkDialogMessageText()
+        createPage.checkButtonsText()
+        createPage.clickNegativeButton()
+        mainPage.checkToolbarTitle()
         deviceScreenshot("main_page_display")
     }
 
