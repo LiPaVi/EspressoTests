@@ -9,6 +9,7 @@ import android.support.test.espresso.matcher.ViewMatchers.*
 import com.moonpi.swiftnotes.R
 import org.hamcrest.CoreMatchers
 import org.hamcrest.CoreMatchers.endsWith
+import ru.tinkoff.allure.android.deviceScreenshot
 import ru.tinkoff.allure.step
 
 class CreatePage {
@@ -30,52 +31,60 @@ class CreatePage {
     private val hideNoteMenu = onView(withText(hideNote))
 
     fun checkTitle() {
-        step("Проверить хинт заголовка \"{titleDefaultText}\"") {
+        step("Проверить хинт заголовка \"$titleDefaultText\"") {
             title.check(ViewAssertions.matches(withHint(titleDefaultText)))
+            deviceScreenshot("create_page_display")
         }
     }
 
     fun addNoteText(titleText: String, noteText: String) {
-        step("В поля \"{titleDefaultText}\" и \"{noteDefaultText}\" ввести текст") {
+        step("В поля \"$titleDefaultText\" и \"$noteDefaultText\" ввести текст") {
             title.perform(replaceText(titleText))
             note.perform(replaceText(noteText))
+            deviceScreenshot("create_page_display")
         }
     }
 
     fun checkNote() {
-        step("Проверить хинт текста \"{noteDefaultText}\"") {
+        step("Проверить хинт текста \"$noteDefaultText\"") {
             note.check(ViewAssertions.matches(withHint(noteDefaultText)))
+            deviceScreenshot("create_page_display")
         }
     }
 
     fun clickBackButton() {
         step("Нажать в тулбаре \"Назад\"") {
             backButton.perform(click())
+            deviceScreenshot("create_page_display")
         }
     }
 
     fun checkDialogMessageText() {
-        step("Проверить текст \"{messageText}\"") {
+        step("Проверить текст \"$messageText\"") {
             saveDialog.check(ViewAssertions.matches(withText(messageText)))
+            deviceScreenshot("create_page_display")
         }
     }
 
     fun checkButtonsText() {
-        step("Проверить наличие двух кнопок \"{negativeButtonText}\", \"{positiveButtonText}\"") {
+        step("Проверить наличие двух кнопок \"$negativeButtonText\", \"$positiveButtonText\"") {
             positiveButton.check(ViewAssertions.matches(withText(positiveButtonText)))
             negativeButton.check(ViewAssertions.matches(withText(negativeButtonText)))
+            deviceScreenshot("create_page_display")
         }
     }
 
     fun clickNegativeButton() {
-        step("Нажать \"{negativeButtonText}\"") {
+        step("Нажать \"$negativeButtonText\"") {
             negativeButton.perform(click())
+            deviceScreenshot("create_page_display")
         }
     }
 
     fun clickPositiveButton() {
-        step("Нажать \"{positiveButtonText}\"") {
+        step("Нажать \"$positiveButtonText\"") {
             positiveButton.perform(click())
+            deviceScreenshot("create_page_display")
         }
     }
 
@@ -83,19 +92,22 @@ class CreatePage {
         step("Проверить, что текст введен корректно") {
             title.check(ViewAssertions.matches(withText(titleText)))
             note.check(ViewAssertions.matches(withText(noteText)))
+            deviceScreenshot("create_page_display")
         }
     }
 
     fun clickMenu() {
         step("Нажать \"Меню\"") {
             menu.perform(click())
+            deviceScreenshot("create_page_display")
         }
     }
 
     fun checkMenu() {
-        step("Проверить отображение пунктов меню: \"{noteFontSize}\", \"{hideNote}\"") {
+        step("Проверить отображение пунктов меню: \"$noteFontSize\", \"$hideNote\"") {
             noteFontSizeMenu.check(ViewAssertions.matches(isEnabled()))
             hideNoteMenu.check(ViewAssertions.matches(isEnabled()))
+            deviceScreenshot("create_page_display")
         }
     }
 }

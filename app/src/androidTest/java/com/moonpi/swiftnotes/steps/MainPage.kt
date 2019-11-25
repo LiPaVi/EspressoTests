@@ -10,6 +10,7 @@ import android.support.test.espresso.matcher.ViewMatchers.isEnabled
 import android.support.test.espresso.matcher.ViewMatchers.withText
 import com.moonpi.swiftnotes.R
 import org.hamcrest.CoreMatchers
+import ru.tinkoff.allure.android.deviceScreenshot
 import ru.tinkoff.allure.step
 
 class MainPage {
@@ -32,12 +33,14 @@ class MainPage {
     fun clickPlusButton() {
         step("Нажать \"+\"") {
             addNote.perform(click())
+            deviceScreenshot("main_page_display")
         }
     }
 
     fun checkToolbarTitle() {
-        step("Открылся главный экран \"{titleText}\"") {
+        step("Открылся главный экран \"$titleText\"") {
             toolbar.check(ViewAssertions.matches(ViewMatchers.withChild(withText(titleText))))
+            deviceScreenshot("main_page_display")
         }
     }
 
@@ -45,37 +48,45 @@ class MainPage {
         step("Проверяем, что запись появилась") {
             titleView.check(ViewAssertions.matches(withText(titleText)))
             bodyView.check(ViewAssertions.matches(withText(noteText)))
+            deviceScreenshot("main_page_display")
         }
     }
 
     fun clickMenu() {
         step("Нажать \"Меню\"") {
             menu.perform(click())
+            deviceScreenshot("main_page_display")
         }
     }
 
     fun checkMenu() {
-        step("Проверить отображение пунктов меню: \"{backup}\", \"{restore}\", \"{rateApp}\"") {
+        step("Проверить отображение пунктов меню: \"$backup\", \"$restore\", \"$rateApp\"") {
             backupMenu.check(ViewAssertions.matches(isEnabled()))
             restoreMenu.check(ViewAssertions.matches(isEnabled()))
             rateAppMenu.check(ViewAssertions.matches(isEnabled()))
+            deviceScreenshot("main_page_display")
         }
     }
 
     fun longClickToNote() {
         step("Лонг тап на заметку на главном экране") {
             note.perform(longClick())
+            deviceScreenshot("main_page_display")
         }
     }
 
     fun deleteNote() {
-        step("В тулбаре нажать \"Удалить\" и затем ") {
+        step("В тулбаре нажать \"Удалить\" и затем нажать \"Ок\"") {
             delete.perform(click())
             okButton.perform(click())
+            deviceScreenshot("main_page_display")
         }
     }
 
     fun checkDeletedNote() {
-        note.check(ViewAssertions.doesNotExist())
+        step("Проверяем отсутствие заметки на главном экране") {
+            note.check(ViewAssertions.doesNotExist())
+            deviceScreenshot("main_page_display")
+        }
     }
 }

@@ -1,0 +1,129 @@
+{
+  "fullName": "com.moonpi.swiftnotes.test.SimpleTest.saveNewNoteTest",
+  "historyId": "70b5446e924c28d178857ede0fa6970b",
+  "labels": [
+    {
+      "name": "package",
+      "value": "com.moonpi.swiftnotes.test"
+    },
+    {
+      "name": "testClass",
+      "value": "com.moonpi.swiftnotes.test.SimpleTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "saveNewNoteTest"
+    },
+    {
+      "name": "suite",
+      "value": "Создание заметки"
+    }
+  ],
+  "links": [],
+  "uuid": "com.moonpi.swiftnotes.test.SimpleTest#saveNewNoteTest",
+  "attachments": [],
+  "name": "Проверка сохранения заметки",
+  "parameters": [],
+  "stage": "finished",
+  "start": 1574719997038,
+  "status": "passed",
+  "steps": [
+    {
+      "attachments": [
+        {
+          "name": "main_page_display",
+          "source": "444bec74-a731-4c61-adb5-8604b9529e69-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Нажать \"+\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719997914,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574719999486
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "abc60910-3017-47c7-803f-e6731b75de7e-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "В поля \"Title\" и \"Note\" ввести текст",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719999487,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720000541
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "f76a8572-e322-47bf-89cf-0a87f753c1a3-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Проверить, что текст введен корректно",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720000542,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720000820
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "8bf8d5a4-7ba0-4015-bf97-c89632454ba8-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Нажать в тулбаре \"Назад\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720000820,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720002025
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "e15bc052-ebf1-4662-a0a9-b20e39ae3596-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Нажать \"YES\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720002025,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720003297
+    },
+    {
+      "attachments": [
+        {
+          "name": "main_page_display",
+          "source": "a10aff9b-aff1-494b-be51-372f6a5dad00-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Проверяем, что запись появилась",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720003297,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720004183
+    }
+  ],
+  "stop": 1574720004670
+}

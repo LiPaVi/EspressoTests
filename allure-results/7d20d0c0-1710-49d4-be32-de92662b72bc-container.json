@@ -1,0 +1,16 @@
+{
+  "afters": [],
+  "befores": [],
+  "children": [
+    "com.moonpi.swiftnotes.test.SimpleTest#menuTest",
+    "com.moonpi.swiftnotes.test.SimpleTest#deleteNoteTest",
+    "com.moonpi.swiftnotes.test.SimpleTest#saveNewNoteTest",
+    "com.moonpi.swiftnotes.test.SimpleTest#createScreenTest",
+    "com.moonpi.swiftnotes.test.SimpleTest#newNoteHints"
+  ],
+  "links": [],
+  "name": "Создание заметки",
+  "start": 1574718898996,
+  "stop": 1574718937625,
+  "uuid": "7d20d0c0-1710-49d4-be32-de92662b72bc"
+}

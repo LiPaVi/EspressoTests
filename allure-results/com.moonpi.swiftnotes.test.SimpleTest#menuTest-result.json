@@ -1,0 +1,113 @@
+{
+  "fullName": "com.moonpi.swiftnotes.test.SimpleTest.menuTest",
+  "historyId": "c4898e280e101512f63fa634f88b4a15",
+  "labels": [
+    {
+      "name": "package",
+      "value": "com.moonpi.swiftnotes.test"
+    },
+    {
+      "name": "testClass",
+      "value": "com.moonpi.swiftnotes.test.SimpleTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "menuTest"
+    },
+    {
+      "name": "suite",
+      "value": "Создание заметки"
+    }
+  ],
+  "links": [],
+  "uuid": "com.moonpi.swiftnotes.test.SimpleTest#menuTest",
+  "attachments": [],
+  "name": "Проверка пунктов меню в тулбаре",
+  "parameters": [],
+  "stage": "finished",
+  "start": 1574719977512,
+  "status": "passed",
+  "steps": [
+    {
+      "attachments": [
+        {
+          "name": "main_page_display",
+          "source": "17e69945-72a5-4cac-833e-feee1a559152-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Нажать \"Меню\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719979380,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574719981338
+    },
+    {
+      "attachments": [
+        {
+          "name": "main_page_display",
+          "source": "2d90c13e-b2e3-49d8-a690-e73027647353-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Проверить отображение пунктов меню: \"Backup notes\", \"Restore notes\", \"Rate app\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719981339,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574719981665
+    },
+    {
+      "attachments": [
+        {
+          "name": "main_page_display",
+          "source": "32246541-fe68-479e-add7-bc9e30abbe59-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Нажать \"+\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719982090,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574719984326
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "dc2d6304-7118-41b2-9210-36e222cda8e5-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Нажать \"Меню\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719984327,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574719985543
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "0457b635-14cc-4bdb-a71d-526c73306c45-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Проверить отображение пунктов меню: \"Note font size\", \"Hide note body in list\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719985544,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574719985837
+    }
+  ],
+  "stop": 1574719986610
+}

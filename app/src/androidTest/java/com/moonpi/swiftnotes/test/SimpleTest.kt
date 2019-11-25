@@ -39,7 +39,6 @@ class SimpleTest : AbstractSwiftnotesTest() {
         mainPage.clickPlusButton()
         createPage.checkTitle()
         createPage.checkNote()
-        deviceScreenshot("page_display")
     }
 
     @Test
@@ -53,12 +52,11 @@ class SimpleTest : AbstractSwiftnotesTest() {
         createPage.checkButtonsText()
         createPage.clickNegativeButton()
         mainPage.checkToolbarTitle()
-        deviceScreenshot("main_page_display")
     }
 
     @Test
     @DisplayName("Проверка сохранения заметки")
-    fun SaveNewNoteTest() {
+    fun saveNewNoteTest() {
         mainPage.clickPlusButton()
         createPage.addNoteText(titleText, noteText)
         createPage.checkCorrectText(titleText, noteText)
@@ -69,7 +67,7 @@ class SimpleTest : AbstractSwiftnotesTest() {
 
     @Test
     @DisplayName("Проверка пунктов меню в тулбаре")
-    fun MenuTest() {
+    fun menuTest() {
         mainPage.clickMenu()
         mainPage.checkMenu()
         pressBack()
@@ -80,7 +78,7 @@ class SimpleTest : AbstractSwiftnotesTest() {
 
     @Test
     @DisplayName("Проверка удаления заметки")
-    fun DeleteNoteTest() {
+    fun deleteNoteTest() {
         mainPage.clickPlusButton()
         createPage.addNoteText(titleText, noteText)
         createPage.clickBackButton()

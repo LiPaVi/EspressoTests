@@ -1,0 +1,145 @@
+{
+  "fullName": "com.moonpi.swiftnotes.test.SimpleTest.deleteNoteTest",
+  "historyId": "d04931b6ba08ca020d8674382707d1df",
+  "labels": [
+    {
+      "name": "package",
+      "value": "com.moonpi.swiftnotes.test"
+    },
+    {
+      "name": "testClass",
+      "value": "com.moonpi.swiftnotes.test.SimpleTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "deleteNoteTest"
+    },
+    {
+      "name": "suite",
+      "value": "Создание заметки"
+    }
+  ],
+  "links": [],
+  "uuid": "com.moonpi.swiftnotes.test.SimpleTest#deleteNoteTest",
+  "attachments": [],
+  "name": "Проверка удаления заметки",
+  "parameters": [],
+  "stage": "finished",
+  "start": 1574719986958,
+  "status": "passed",
+  "steps": [
+    {
+      "attachments": [
+        {
+          "name": "main_page_display",
+          "source": "4c2636c1-20e3-4cef-a0df-fd83928afe52-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Нажать \"+\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719987739,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574719989352
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "b51d014b-ae36-47e0-93e9-cc2b5148f288-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "В поля \"Title\" и \"Note\" ввести текст",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719989352,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574719990439
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "f4240fbf-45e9-45f6-a543-fd3f3d4b521c-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Нажать в тулбаре \"Назад\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719990439,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574719991715
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "715dea31-c3e9-45a7-a31e-7df3c33f0fd8-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Нажать \"YES\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719991716,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574719993237
+    },
+    {
+      "attachments": [
+        {
+          "name": "main_page_display",
+          "source": "3ed006ee-8179-4d9e-a555-97565ecab41a-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Лонг тап на заметку на главном экране",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719993237,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574719994644
+    },
+    {
+      "attachments": [
+        {
+          "name": "main_page_display",
+          "source": "0d27aaf5-4e27-42a8-9b97-c7642c5fc42f-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "В тулбаре нажать \"Удалить\" и затем нажать \"Ок\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719994644,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574719996171
+    },
+    {
+      "attachments": [
+        {
+          "name": "main_page_display",
+          "source": "9e3654e4-578f-45d2-8220-189ce1c98192-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Проверяем отсутствие заметки на главном экране",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574719996171,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574719996463
+    }
+  ],
+  "stop": 1574719996898
+}

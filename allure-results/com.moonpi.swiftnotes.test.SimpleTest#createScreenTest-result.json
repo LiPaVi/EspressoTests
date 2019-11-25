@@ -1,0 +1,161 @@
+{
+  "fullName": "com.moonpi.swiftnotes.test.SimpleTest.createScreenTest",
+  "historyId": "525ce3d02db2db62308789efd177a932",
+  "labels": [
+    {
+      "name": "package",
+      "value": "com.moonpi.swiftnotes.test"
+    },
+    {
+      "name": "testClass",
+      "value": "com.moonpi.swiftnotes.test.SimpleTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "createScreenTest"
+    },
+    {
+      "name": "suite",
+      "value": "Создание заметки"
+    }
+  ],
+  "links": [],
+  "uuid": "com.moonpi.swiftnotes.test.SimpleTest#createScreenTest",
+  "attachments": [],
+  "name": "Проверка экрана создания заметки",
+  "parameters": [],
+  "stage": "finished",
+  "start": 1574720004814,
+  "status": "passed",
+  "steps": [
+    {
+      "attachments": [
+        {
+          "name": "main_page_display",
+          "source": "c527db3b-0afb-4257-912a-924a79b10749-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Нажать \"+\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720005636,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720007204
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "c5610857-da89-445b-a3c5-0493a586c82d-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Проверить хинт заголовка \"Title\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720007204,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720007413
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "423bbfc8-2c42-4b61-ab27-b555cbe1ba95-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Проверить хинт текста \"Note\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720007414,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720007717
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "8165794f-16b5-4304-8969-bf16f653cb06-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Нажать в тулбаре \"Назад\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720007718,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720008958
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "c01a5cd7-3c7f-4388-b44a-f4c332fcfb60-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Проверить текст \"Save changes?\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720008959,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720009194
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "118a27ea-a355-4bf4-9cb4-31a9761b81fe-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Проверить наличие двух кнопок \"NO\", \"YES\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720009196,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720009404
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "7a84b1e2-5c49-4cd7-92d8-c72c2d284d17-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Нажать \"NO\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720009404,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720010677
+    },
+    {
+      "attachments": [
+        {
+          "name": "main_page_display",
+          "source": "ef86fef3-1665-4bad-87f8-525f50996b74-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Открылся главный экран \"Swiftnotes\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720010678,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720010887
+    }
+  ],
+  "stop": 1574720011362
+}

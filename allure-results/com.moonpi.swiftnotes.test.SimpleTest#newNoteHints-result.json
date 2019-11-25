@@ -1,0 +1,81 @@
+{
+  "fullName": "com.moonpi.swiftnotes.test.SimpleTest.newNoteHints",
+  "historyId": "80648826bb9039ef9074b66de14c898d",
+  "labels": [
+    {
+      "name": "package",
+      "value": "com.moonpi.swiftnotes.test"
+    },
+    {
+      "name": "testClass",
+      "value": "com.moonpi.swiftnotes.test.SimpleTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "newNoteHints"
+    },
+    {
+      "name": "suite",
+      "value": "Создание заметки"
+    }
+  ],
+  "links": [],
+  "uuid": "com.moonpi.swiftnotes.test.SimpleTest#newNoteHints",
+  "attachments": [],
+  "name": "Проверка открытия страницы создания",
+  "parameters": [],
+  "stage": "finished",
+  "start": 1574720011427,
+  "status": "passed",
+  "steps": [
+    {
+      "attachments": [
+        {
+          "name": "main_page_display",
+          "source": "c21b3327-d241-4d80-977e-1b9be5ef9876-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Нажать \"+\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720012187,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720013685
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "c0a41136-50a6-4a28-be12-fffa759c7c02-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Проверить хинт заголовка \"Title\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720013686,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720013881
+    },
+    {
+      "attachments": [
+        {
+          "name": "create_page_display",
+          "source": "0ae9cef5-c8db-4c6b-8361-c6c029425f2c-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "Проверить хинт текста \"Note\"",
+      "parameters": [],
+      "stage": "finished",
+      "start": 1574720013881,
+      "status": "passed",
+      "steps": [],
+      "stop": 1574720014148
+    }
+  ],
+  "stop": 1574720014683
+}
